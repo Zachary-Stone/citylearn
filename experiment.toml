@@ -1,0 +1,20 @@
+[run]
+experiments = ["baseline", "rbc"]
+show_figures = true
+output_directory = "outputs"
+
+[simulation]
+dataset_name = "citylearn_challenge_2022_phase_all"
+random_seed = 0
+building_count = 2
+day_count = 7
+active_observations = ["hour"]
+central_agent = true
+
+[tabular_q_learning]
+episodes = 100
+
+[sac]
+episodes = 50
+reward_function = "custom"
+agent_kwargs = { learning_starts = 100, batch_size = 256 }
