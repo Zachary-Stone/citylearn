@@ -1,0 +1,44 @@
+[project]
+name = "citylearn-tutorial"
+version = "0.1.0"
+description = "Reinforcement-learning control experiments for CityLearn."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4",
+    "CityLearn==2.2b0",
+    "gymnasium",
+    "ipywidgets",
+    "matplotlib",
+    "nrel-pysam",
+    "numpy",
+    "pandas",
+    "requests",
+    "seaborn",
+    "simplejson",
+    "stable-baselines3",
+    "tqdm",
+]
+
+[tool.poetry]
+package-mode = true
+packages = [
+    { include = "citylearn_tutorial", from = "src" },
+]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.12.0"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
