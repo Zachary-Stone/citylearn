@@ -47,7 +47,7 @@ def run_episode(
     """
     observations, _ = environment.reset()
     actions_list = []
-    while not environment.terminated:
+    while not environment.unwrapped.terminated:
         actions = agent.predict(observations, deterministic=deterministic)
         observations, _, _, _, _ = environment.step(actions)
         actions_list.append(_record_actions(actions))

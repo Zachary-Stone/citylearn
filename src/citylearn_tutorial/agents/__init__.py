@@ -7,6 +7,7 @@ from citylearn_tutorial.agents.baselines import (
     run_hour_rbc,
     run_random_agent,
 )
+from citylearn_tutorial.agents.tabular_q_learning import run_tabular_q_learning
 
 __all__ = [
     "DEFAULT_HOUR_ACTION_MAP",
@@ -14,4 +15,5 @@ __all__ = [
     "run_episode",
     "run_hour_rbc",
     "run_random_agent",
+    "run_tabular_q_learning",
 ]
