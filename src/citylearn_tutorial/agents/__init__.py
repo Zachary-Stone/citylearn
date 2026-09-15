@@ -7,6 +7,7 @@ from citylearn_tutorial.agents.baselines import (
     run_hour_rbc,
     run_random_agent,
 )
+from citylearn_tutorial.agents.sac import run_sac
 from citylearn_tutorial.agents.tabular_q_learning import run_tabular_q_learning
 
 __all__ = [
@@ -15,5 +16,6 @@ __all__ = [
     "run_episode",
     "run_hour_rbc",
     "run_random_agent",
+    "run_sac",
     "run_tabular_q_learning",
 ]
